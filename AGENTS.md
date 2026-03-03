@@ -37,9 +37,9 @@ Before every commit, you **must** run these steps:
 1.  **Format Code:**
     ```bash
     # (First time only)
-    npm install --save-dev prettier @shopify/prettier-plugin-liquid
+    pnpm add -D prettier @shopify/prettier-plugin-liquid
     # Format all files
-    npx prettier . --write
+    pnpm exec prettier . --write
     ```
 2.  **Build Locally & Verify:**
 
