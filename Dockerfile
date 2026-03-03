@@ -8,6 +8,10 @@ FROM ruby:slim
 # ARG USERNAME=jekyll
 
 ENV DEBIAN_FRONTEND noninteractive
+ARG APT_MIRROR=mirrors.tuna.tsinghua.edu.cn
+ARG PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ARG GEM_SOURCE=https://gems.ruby-china.com/
+ARG BUNDLE_MIRROR=https://gems.ruby-china.com/
 
 LABEL authors="Amir Pourmand,George Araújo" \
       description="Docker image for al-folio academic template" \
@@ -20,7 +24,8 @@ LABEL authors="Amir Pourmand,George Araújo" \
 #     useradd -u $USERID -m -g $GROUPNAME $USERNAME
 
 # install system dependencies
-RUN apt-get update -y && \
+RUN sed -i "s|http://deb.debian.org/debian|https://${APT_MIRROR}/debian|g; s|http://deb.debian.org/debian-security|https://${APT_MIRROR}/debian-security|g" /etc/apt/sources.list.d/debian.sources && \
+    apt-get update -y && \
     apt-get install -y --no-install-recommends \
         build-essential \
         curl \
@@ -32,7 +37,7 @@ RUN apt-get update -y && \
         procps \
         python3-pip \
         zlib1g-dev && \
-    pip --no-cache-dir install --upgrade --break-system-packages nbconvert
+    pip --no-cache-dir install -i ${PIP_INDEX_URL} --upgrade --break-system-packages nbconvert
 
 # clean up
 RUN apt-get clean && \
@@ -61,8 +66,8 @@ ADD Gemfile /srv/jekyll
 WORKDIR /srv/jekyll
 
 # install jekyll and dependencies
-RUN gem install --no-document jekyll bundler
-RUN bundle install --no-cache
+RUN gem install --clear-sources --source ${GEM_SOURCE} --no-document jekyll bundler
+RUN bundle config set mirror.https://rubygems.org ${BUNDLE_MIRROR} && bundle install --no-cache
 
 EXPOSE 8080
 

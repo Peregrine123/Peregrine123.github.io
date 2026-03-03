@@ -13,8 +13,8 @@ manage_gemfile_lock() {
             echo "Gemfile.lock is tracked by git, keeping it intact"
             git restore Gemfile.lock 2>/dev/null || true
         else
-            echo "Gemfile.lock is not tracked by git, removing it"
-            rm Gemfile.lock
+            # Local repos often keep an untracked lockfile for faster bootstraps.
+            echo "Gemfile.lock is not tracked by git, keeping local lockfile"
         fi
     fi
 }
