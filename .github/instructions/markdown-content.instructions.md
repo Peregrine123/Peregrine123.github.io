@@ -264,7 +264,7 @@ The Prettier formatter applies to markdown files:
 **Always run before committing:**
 
 ```bash
-npx prettier --write .
+pnpm exec prettier --write .
 ```
 
 ## Trust These Instructions

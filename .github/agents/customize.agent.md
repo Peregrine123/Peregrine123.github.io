@@ -156,7 +156,7 @@ bundle exec jekyll build
 
 ```bash
 # Format code with Prettier
-npx prettier . --write
+pnpm exec prettier . --write
 ```
 
 ## Common Customization Tasks
