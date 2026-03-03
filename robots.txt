@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://peregrine123.github.io/sitemap.xml
