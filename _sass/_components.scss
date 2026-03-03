@@ -67,6 +67,24 @@ ul.task-list input[type="checkbox"] {
       display: inline-block;
       margin: 0;
     }
+
+    .address p {
+      display: block;
+    }
+
+    .student-contact-name {
+      display: block;
+      margin: 0.8rem 0 0.5rem;
+      font-family: serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+
+    .student-links a + a {
+      margin-left: 0.35rem;
+    }
   }
 }
 

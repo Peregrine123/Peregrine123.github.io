@@ -2,20 +2,20 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: # the website title (if blank, full name will be used instead)
-first_name: Peregrine123
+title: 洪喆沛 # the website title (if blank, full name will be used instead)
+first_name: 洪
 middle_name:
-last_name:
+last_name: 喆沛
 contact_note: >
-  Please reach out by email; more details will be added soon.
+  I welcome discussions on research collaboration and technical ideas.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A personal homepage built with al-folio.
+  Undergraduate researcher in Software Engineering at South China Normal University, focusing on cross-subject EEG emotion recognition and agentic AI systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: personal-homepage, academic, portfolio # add your own keywords or leave empty
-lang: zh # the language of your site (for example: en, fr, cn, ru, etc.)
+keywords: eeg, emotion-recognition, domain-adaptation, llm-agent, multimodal-llm # add your own keywords or leave empty
+lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: P # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://peregrine123.github.io # the base hostname & protocol for your site
@@ -189,6 +189,9 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
+  - BIBM.pdf
+  - TAFFC.pdf
+  - resume.pdf
   - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
