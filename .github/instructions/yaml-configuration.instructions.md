@@ -209,8 +209,8 @@ Update these in `_config.yml`:
 2. **Prettier format check:**
 
    ```bash
-   npx prettier _config.yml _data/ --check
-   npx prettier . --write  # Fix formatting
+   pnpm exec prettier _config.yml _data/ --check
+   pnpm exec prettier . --write  # Fix formatting
    ```
 
 3. **Visual verification:**

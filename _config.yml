@@ -188,7 +188,7 @@ exclude:
   - LICENSE
   - lighthouse_results/
   - package.json
-  - package-lock.json
+  - pnpm-lock.yaml
   - BIBM.pdf
   - TAFFC.pdf
   - resume.pdf

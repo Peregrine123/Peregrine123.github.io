@@ -31,6 +31,12 @@ jobs:
         with:
           ruby-version: "3.2.2"
           bundler-cache: true
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+      - name: Setup pnpm ⚙️
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.5.0
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -49,8 +55,7 @@ jobs:
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          pnpm dlx purgecss -c purgecss.config.js
       - name: Get Chromium version 🌐
         # https://github.com/GoogleChromeLabs/chrome-for-testing?tab=readme-ov-file#other-api-endpoints
         run: |
@@ -62,13 +67,7 @@ jobs:
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: ${{ env.CHROMIUM_VERSION }}
-      - name: Install chromedriver 🚗
-        run: |
-          npm install -g chromedriver@$CHROMIUM_VERSION
       - name: Run axe 🪓
         # https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli
         run: |
-          npm install -g @axe-core/cli
-          npm install -g http-server
-          http-server _site/ &
-          axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit
+          pnpm --package=chromedriver@$CHROMIUM_VERSION --package=@axe-core/cli --package=http-server dlx bash -lc "http-server _site/ & axe --chromedriver-path \"\$(command -v chromedriver)\" http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit"

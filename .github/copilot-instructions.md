@@ -134,7 +134,7 @@ When making changes:
   - Runs prettier on all files
   - **Fails PRs if code is not properly formatted**
   - Generates HTML diff artifact on failure
-  - Must install prettier locally to avoid failures: `npm install prettier @shopify/prettier-plugin-liquid`
+  - Must install prettier locally to avoid failures: `pnpm add -D prettier @shopify/prettier-plugin-liquid`
 - **broken-links.yml, broken-links-site.yml** – Link validation
 - **axe.yml** – Accessibility testing
 - **codeql.yml** – Security scanning
@@ -148,8 +148,8 @@ When making changes:
 1. **Prettier formatting (mandatory):**
 
 ```bash
-npm install --save-dev prettier @shopify/prettier-plugin-liquid
-npx prettier . --write
+pnpm add -D prettier @shopify/prettier-plugin-liquid
+pnpm exec prettier . --write
 ```
 
 2. **Local build test with Jekyll:**
@@ -197,7 +197,7 @@ bundle exec jekyll build
 - **Problem:** PR fails prettier check after local builds passed
 - **Solution:** Run prettier before committing:
   ```bash
-  npx prettier . --write
+  pnpm exec prettier . --write
   git add . && git commit -m "Format code with prettier"
   ```
 

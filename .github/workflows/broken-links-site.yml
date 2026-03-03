@@ -19,6 +19,12 @@ jobs:
         with:
           ruby-version: "3.2.2"
           bundler-cache: true
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+      - name: Setup pnpm ⚙️
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.5.0
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -37,8 +43,7 @@ jobs:
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          pnpm dlx purgecss -c purgecss.config.js
       - name: Link Checker 🔗
         uses: lycheeverse/lychee-action@v2.0.2
         with:

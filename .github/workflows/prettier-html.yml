@@ -18,14 +18,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
 
-      - name: Install Prettier
-        run: npm install -g prettier
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.5.0
 
       - name: Check for Prettier
-        run: npx prettier --version || echo "Prettier not found"
+        run: pnpm dlx prettier --version || echo "Prettier not found"
 
       - name: Run Prettier on HTML files
-        run: npx prettier --write '**/*.html'
+        run: pnpm dlx prettier --write '**/*.html'
 
       - name: Commit and push changes
         run: |
