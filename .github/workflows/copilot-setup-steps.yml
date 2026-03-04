@@ -39,17 +39,17 @@ jobs:
           python-version: "3.13"
           cache: "pip"
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.5.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "latest"
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.5.0
 
       - name: Install system dependencies
         run: |
