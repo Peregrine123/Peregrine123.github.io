@@ -1,0 +1,100 @@
+文件名	原路径	二级标签
+A Framework for Training Large Language Models for Code Generation via Proximal Policy Optimization.md	Notion/文件夹/A Framework for Training Large Language Models for Code Generation via Proximal Policy Optimization.md	Infra
+A Self-Improving Coding Agent.md	Notion/文件夹/A Self-Improving Coding Agent.md	code_agent
+A Survey of Context Engineering for Large Language Models.md	Notion/文件夹/A Survey of Context Engineering for Large Language Models.md	Agentic
+A Survey on Code Generation with LLM-based Agents.md	Notion/文件夹/A Survey on Code Generation with LLM-based Agents.md	Survey
+Agent Learing via Early Experience.md	Notion/文件夹/Agent Learing via Early Experience.md	Agentic
+Agentic Context Engineering.md	Notion/文件夹/Agentic Context Engineering.md	Agentic
+AgentSquare Automatic LLM Agent Search in Modular Design Space.md	Notion/文件夹/AgentSquare Automatic LLM Agent Search in Modular Design Space.md	Agentic
+Agyn A Multi-Agent System for Team-Based Autonomous Software Engineering.md	Notion/文件夹/Agyn A Multi-Agent System for Team-Based Autonomous Software Engineering.md	code_agent
+AI Agentic Programming A Survey of Techniques, Challenges, and Opportunities.md	Notion/文件夹/AI Agentic Programming A Survey of Techniques, Challenges, and Opportunities.md	Survey
+AOrchestra Automating Sub-Agent Creation for Agentic Orchestration.md	Notion/文件夹/AOrchestra Automating Sub-Agent Creation for Agentic Orchestration.md	Agentic
+AppWorld A Controllable World of Apps and People for Benchmarking Interactive Coding Agents.md	Notion/文件夹/AppWorld A Controllable World of Apps and People for Benchmarking Interactive Coding Agents.md	Eval
+AutoCodeRover Autonomous Program Improvement.md	Notion/文件夹/AutoCodeRover Autonomous Program Improvement.md	code_agent
+BEIT BERT Pre-Training of Image Transformers.md	Notion/文件夹/BEIT BERT Pre-Training of Image Transformers.md	MLLM
+BERT.md	Notion/文件夹/BERT.md	Based
+BLIP.md	Notion/文件夹/BLIP.md	MLLM
+BOLT Bootstrap Long Chain-of-Thought in Language Models without Distillation.md	Notion/文件夹/BOLT Bootstrap Long Chain-of-Thought in Language Models without Distillation.md	data
+Building multi-agent systems when and how to use them.md	Notion/文件夹/Building multi-agent systems when and how to use them.md	Agentic
+Chain of Trought.md	Notion/文件夹/Chain of Trought.md	Prompting
+CL-Bench.md	Notion/文件夹/CL-Bench.md	Context
+CLaSp In-Context Layer Skip for Self-Speculative Decoding.md	Notion/文件夹/CLaSp In-Context Layer Skip for Self-Speculative Decoding.md	efficiency
+CLIP.md	Notion/文件夹/CLIP.md	MLLM
+Closing the Loop Universal Repository Representation with RPG-Encoder.md	Notion/文件夹/Closing the Loop Universal Repository Representation with RPG-Encoder.md	code_agent
+CodeCoR An LLM-Based Self-Reflective Multi-Agent Framework for Code Generation.md	Notion/文件夹/CodeCoR An LLM-Based Self-Reflective Multi-Agent Framework for Code Generation.md	code_agent
+CoT-Self-Instruct Building high-quality synthetic prompts for reasoning and non-reasoning tasks.md	Notion/文件夹/CoT-Self-Instruct Building high-quality synthetic prompts for reasoning and non-reasoning tasks.md	data
+DeepCode Open Agentic Coding.md	Notion/文件夹/DeepCode Open Agentic Coding.md	code_agent
+Deepseek-OCR.md	Notion/文件夹/Deepseek-OCR.md	未分类
+Deepseek-R1.md	Notion/文件夹/Deepseek-R1.md	Based
+Deepseek-V3.md	Notion/文件夹/Deepseek-V3.md	Based
+Demystifying Evals for AI Agents.md	Notion/文件夹/Demystifying Evals for AI Agents.md	Agentic
+Do We Always Need Query-Level Workflows Rethinking Agentic Workflow Generation for Multi-Agent Systems.md	Notion/文件夹/Do We Always Need Query-Level Workflows Rethinking Agentic Workflow Generation for Multi-Agent Systems.md	Agentic; Analysis
+DocAgent A Multi-Agent System for Automated Code Documentation Generation.md	Notion/文件夹/DocAgent A Multi-Agent System for Automated Code Documentation Generation.md	Agentic
+DyTopo Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching.md	Notion/文件夹/DyTopo Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching.md	未分类
+E2Edev_ Benchmarking Large Language Models in End-to-End Software Development Task.md	Notion/文件夹/E2Edev_ Benchmarking Large Language Models in End-to-End Software Development Task.md	Eval
+Effective Context Engineering for AI Agents.md	Notion/文件夹/Effective Context Engineering for AI Agents.md	Agentic
+Effective Harnesses for Long-Running Agents.md	Notion/文件夹/Effective Harnesses for Long-Running Agents.md	Agentic; Analysis
+Exposing Weak Links in Multi-Agent Systems under Adversarial Prompting.md	Notion/文件夹/Exposing Weak Links in Multi-Agent Systems under Adversarial Prompting.md	Agentic
+Flamingo.md	Notion/文件夹/Flamingo.md	MLLM
+Generative Recommendation Towards Next-generation Recommender Paradigm.md	Notion/文件夹/Generative Recommendation Towards Next-generation Recommender Paradigm.md	RecSys
+GLM-5 from Vibe Coding to Agentic Engineering.md	Notion/文件夹/GLM-5 from Vibe Coding to Agentic Engineering.md	Based
+GPT-1.md	Notion/文件夹/GPT-1.md	Based
+GPT-2.md	Notion/文件夹/GPT-2.md	Based
+GPT-3.md	Notion/文件夹/GPT-3.md	Based
+Group Verification-Based Policy Optimization For Interactive Coding Agents.md	Notion/文件夹/Group Verification-Based Policy Optimization For Interactive Coding Agents.md	code_agent
+Hierarchical Context Pruning_ Optimizing Real-World Code Completion with Repository-Level Pretrained Code LLMs.md	Notion/文件夹/Hierarchical Context Pruning_ Optimizing Real-World Code Completion with Repository-Level Pretrained Code LLMs.md	Prompting
+HybridFlow A Flexible and Efficient RLHF Framework.md	Notion/文件夹/HybridFlow A Flexible and Efficient RLHF Framework.md	Infra
+Instruct GPT.md	Notion/文件夹/Instruct GPT.md	未分类
+Janus Decoupling Visual Encoding for Unified Multimodal Understanding and Generation.md	Notion/文件夹/Janus Decoupling Visual Encoding for Unified Multimodal Understanding and Generation.md	MLLM
+Kimi K2.5 Visual Agentic Intelligence.md	Notion/文件夹/Kimi K2.5 Visual Agentic Intelligence.md	Based
+Kimi Linear An Expressive, Efficient Attention Architecture.md	Notion/文件夹/Kimi Linear An Expressive, Efficient Attention Architecture.md	Based
+KIMI-DEV AGENTLESS TRAINING AS SKILL PRIOR FOR SWE-AGENTS.md	Notion/文件夹/KIMI-DEV AGENTLESS TRAINING AS SKILL PRIOR FOR SWE-AGENTS.md	code_agent
+Learning Latency-Aware Orchestration for Parallel Multi-Agent Systems.md	Notion/文件夹/Learning Latency-Aware Orchestration for Parallel Multi-Agent Systems.md	Agentic
+LIME Less Is More for MLLM Evaluation.md	Notion/文件夹/LIME Less Is More for MLLM Evaluation.md	Eval
+LLaMA-VID An Image is Worth 2 Tokens in Large Language Models.md	Notion/文件夹/LLaMA-VID An Image is Worth 2 Tokens in Large Language Models.md	MLLM; Vedio
+LLaVA-Mini Efficient Image and Video Large Multimodal Models with One Vision Token.md	Notion/文件夹/LLaVA-Mini Efficient Image and Video Large Multimodal Models with One Vision Token.md	MLLM; Vedio
+LLAVA.md	Notion/文件夹/LLAVA.md	MLLM
+LOOK BACK TO REASON FORWARD REVISITABLE MEMORY FOR LONG-CONTEXT LLM AGENTS.md	Notion/文件夹/LOOK BACK TO REASON FORWARD REVISITABLE MEMORY FOR LONG-CONTEXT LLM AGENTS.md	Context
+Look-Back Implicit Visual Re-focusing in MLLM Reasoning.md	Notion/文件夹/Look-Back Implicit Visual Re-focusing in MLLM Reasoning.md	MLLM
+LoRA Without Regret.md	Notion/文件夹/LoRA Without Regret.md	efficiency
+LoRA.md	Notion/文件夹/LoRA.md	efficiency
+Maintain Coder Maintainable Code Generation Under Dynamic Requirements.md	Notion/文件夹/Maintain Coder Maintainable Code Generation Under Dynamic Requirements.md	code_agent
+Metagpt Meta programming for multi-agent collaborative framework.md	Notion/文件夹/Metagpt Meta programming for multi-agent collaborative framework.md	code_agent
+Multi-agent Architecture Search via Agentic Supernet.md	Notion/文件夹/Multi-agent Architecture Search via Agentic Supernet.md	Agentic
+Multi-Agent Teams Hold Experts Back.md	Notion/文件夹/Multi-Agent Teams Hold Experts Back.md	Agentic; Analysis
+NL2Repo-Bench Towards Long-Horizon Repository Generation Evaluation of Coding Agents.md	Notion/文件夹/NL2Repo-Bench Towards Long-Horizon Repository Generation Evaluation of Coding Agents.md	Eval
+On the Uncertainty of Large Language Model-Based Multi-Agent Systems.md	Notion/文件夹/On the Uncertainty of Large Language Model-Based Multi-Agent Systems.md	Agentic; Analysis
+One Model, All Roles Multi-Turn, Multi-Agent Self-Play Reinforcement Learning for Conversational Social Intelligence.md	Notion/文件夹/One Model, All Roles Multi-Turn, Multi-Agent Self-Play Reinforcement Learning for Conversational Social Intelligence.md	Agentic
+One Tool Is Enough Reinforcement Learning for Repository-Level LLM Agents.md	Notion/文件夹/One Tool Is Enough Reinforcement Learning for Repository-Level LLM Agents.md	code_agent
+OneRec Unifying Retrieve and Rank with Generative Recommender and Iterative Preference Alignment.md	Notion/文件夹/OneRec Unifying Retrieve and Rank with Generative Recommender and Iterative Preference Alignment.md	RecSys
+OpenHands An Open Platform for AI Software Developers as Generalist Agents.md	Notion/文件夹/OpenHands An Open Platform for AI Software Developers as Generalist Agents.md	code_agent
+PRISM A Principled Framework for Multi-Agent Reasoning via Gain Decomposition.md	Notion/文件夹/PRISM A Principled Framework for Multi-Agent Reasoning via Gain Decomposition.md	Agentic
+ProjDevBench Benchmarking AI Coding Agents on End-to-End Project Development.md	Notion/文件夹/ProjDevBench Benchmarking AI Coding Agents on End-to-End Project Development.md	Eval
+ProRL Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models.md	Notion/领域(Area)/论文阅读/强化学习应用/ProRL Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models.md	未分类
+QLoRA.md	Notion/文件夹/QLoRA.md	efficiency
+Quiet-STaR Language Models Can Teach Themselves to Think Before Speaking.md	Notion/文件夹/Quiet-STaR Language Models Can Teach Themselves to Think Before Speaking.md	data
+Qwen 2.5 Technique Report.md	Notion/领域(Area)/论文阅读/LLM/Qwen 2.5 Technique Report.md	Based
+Qwen 3.md	Notion/文件夹/Qwen 3.md	Based
+Qwen-2.5 VL.md	Notion/文件夹/Qwen-2.5 VL.md	MLLM
+Qwen-3-VL.md	Notion/文件夹/Qwen-3-VL.md	MLLM
+Qwen3.5 Towards Native Multimodal Agents.md	Notion/文件夹/Qwen3.5 Towards Native Multimodal Agents.md	Based
+ReAct.md	Notion/文件夹/ReAct.md	Agentic
+RepoGenesis Benchmarking End-to-End Microservice Generation from Readme to Repository.md	Notion/文件夹/RepoGenesis Benchmarking End-to-End Microservice Generation from Readme to Repository.md	Eval
+RepoMaster Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving.md	Notion/文件夹/RepoMaster Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving.md	code_agent
+ReSum Unlocking Long-Horizon Search Intelligence via Context Summarization.md	Notion/文件夹/ReSum Unlocking Long-Horizon Search Intelligence via Context Summarization.md	Agentic
+Rethinking the Value of Agent-Generated Tests for LLM-Based Software Engineering Agents.md	Notion/文件夹/Rethinking the Value of Agent-Generated Tests for LLM-Based Software Engineering Agents.md	code_agent; Analysis
+Reward Is Enough LLMs Are In-Context Reinforcement Learners.md	Notion/文件夹/Reward Is Enough LLMs Are In-Context Reinforcement Learners.md	Context
+Semantic Soft Bootstrapping Long Context Reasoning in LLMs without Reinforcement Learning.md	Notion/文件夹/Semantic Soft Bootstrapping Long Context Reasoning in LLMs without Reinforcement Learning.md	data
+Small Models Struggle to Learn from Strong Reasoners.md	Notion/文件夹/Small Models Struggle to Learn from Strong Reasoners.md	data
+STaR_ Bootstrapping Reasoning With Reasoning.md	Notion/文件夹/STaR_ Bootstrapping Reasoning With Reasoning.md	data
+SuperGPQA.md	Notion/文件夹/SuperGPQA.md	Eval
+SWE-agent Agent-Computer Interfaces Enable Automated Software Engineering.md	Notion/文件夹/SWE-agent Agent-Computer Interfaces Enable Automated Software Engineering.md	code_agent
+SWE-bench Can Language Models Resolve Real-World GitHub Issues.md	Notion/文件夹/SWE-bench Can Language Models Resolve Real-World GitHub Issues.md	Eval
+Toward Efficient Agents A Survey of Memory, Tool learning, and Planning.md	Notion/文件夹/Toward Efficient Agents A Survey of Memory, Tool learning, and Planning.md	Survey
+Towards a Science of Scaling Agent Systems.md	Notion/文件夹/Towards a Science of Scaling Agent Systems.md	Agentic; Analysis
+TraceCoder A Trace-Driven Multi-Agent Framework for Automated Debugging of LLM-Generated Code.md	Notion/文件夹/TraceCoder A Trace-Driven Multi-Agent Framework for Automated Debugging of LLM-Generated Code.md	code_agent
+Tree of Thoughts Deliberate Problem Solving with Large Language Models.md	Notion/文件夹/Tree of Thoughts Deliberate Problem Solving with Large Language Models.md	Agentic
+VCM Vision Concept Modeling with Adaptive Vision Token Compression via Instruction Fine-Tuning.md	Notion/文件夹/VCM Vision Concept Modeling with Adaptive Vision Token Compression via Instruction Fine-Tuning.md	MLLM
+Video-MME The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video Analysis.md	Notion/文件夹/Video-MME The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video Analysis.md	MLLM; Vedio
+VQ-VAE.md	Notion/文件夹/VQ-VAE.md	MLLM
+尚未发布!!! SWE-Refactor A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring.md	Notion/文件夹/尚未发布!!! SWE-Refactor A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring.md	Eval

@@ -1,0 +1,36 @@
+---
+分区: arxiv
+tags:
+  - LLM
+源码: 有
+---
+## Abstract + Introduction
+- 背景
+	- 业界对于RL是否真正扩展了Based Model的推理能力, 还是仅仅提高了采样效率存在争议
+- 挑战
+- 贡献
+	- 证明了长期强化学习（ProRL）训练能够发现基础模型即使在大量采样下也无法触及的新颖推理策略
+	- 经过RL训练的模型在广泛的pass@k评估中始终优于基础模型
+## Method
+### 局限 
+- 过于依赖数学等专业领域, 在pre-training和post-Training被过渡训练, 影响了模型泛化能力
+- 强化学习训练过早终止, 导致模型无法充分探索和激发能力
+### 模型特点
+- 支持超过2k steps的推理步数
+- 将数据集拓展至STEM, 而不局限于数学和code
+- 使用创造力指数(与预训练语料的重叠程度)衡量模型推理轨迹的novelty
+
+### 挑战
+- 长期策略优化的挑战是熵崩溃(entropy collaspe), 使之模型在前期训练的输出过于集中, 导致熵急剧下降, 这会导致模型过早的限制在有限范围内, 大大削弱其探索能力
+
+### DAPO(Decoupled Clip and Dynamic Sampling Policy Optimization)
+- 解耦上下裁剪参数$\epsilon$
+$$\text{clip}(r_\theta(\tau), 1 - \epsilon_{\text{low}}, 1 + \epsilon_{\text{high}})$$
+- 对于模型始终做对和始终做错的, 我们不计入奖励计算, 始终选择中等难度样本
+
+### KL散度惩罚
+$$L_{KL-RL}(\theta) = L_{GRPO}(\theta) - \beta D_{KL}(\pi_\theta||\pi_{ref}).$$
+- 为了防止KL损失项在后期主导Loss, 我们定期重置$\pi_{ref}$
+## Exp
+- 模型数据
+## 启示

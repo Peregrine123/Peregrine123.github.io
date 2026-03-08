@@ -1,0 +1,39 @@
+---
+分区:
+tags:
+  - LLM
+  - code_agent
+源码:
+---
+## Abstract + Introduction
+### 背景
+- Agentic派: 例如SWE-Agent, OpenHands
+	- 模拟人类的工作流程, 独立精细编码和测试
+	- 上限高, 灵活, 通过测试自我纠正
+- AgentLess派(工作流): 例如Agentless
+	- 将过程编码转化为固定流水线(定位->修复->测试), 没有多轮交互
+	- 模块化强, 稳定, 容易验证奖励 
+### 挑战
+- 学界认为这两种范式是矛盾的, 认为在灵活性和稳定性上不可兼得
+- Agent训练难度大: 端到端的SWE-Agent轨迹很长(上百步), 难以分配奖励, 造成奖励稀疏的问题, 并且RL在长轨迹训练下也是难题
+### 贡献
+>[!核心论点] 
+> - Agentless不应该视为Agentic的互斥, 而是应该当做一种技能预训练
+> - 通过Agentless方式进行高强度的强化学习, 学习工作模式
+> - 然后使用这些习得的经验模式, 只需少量的数据微调, 就能够切换到Agentic模式
+## Method
+### BugFixer 与 TestWriter
+- 作者设计了两个角色: Bugfixer(负责修代码)和Testwriter(负责写复现测试)
+- RL训练: 利用docker环境, 只有当patch通过测试(Fixer)或者Test复现了Bug(Writer)才能给予奖励
+- 推理时的自博弈: 模型生成了N个补丁和M个测试, 通过交叉验证来得出最佳补丁
+### 从Agentless到Agentic的技能迁移
+#### 工作机制
+- Mid-Training: 使用大量的github PR, Diff以及合成的推理数据进行预训练
+- Agentless RL: 在单轮任务中强化定位和编辑能力
+- Agentic SFT: 使用SWE-Smith数据集(5k 轨迹), 将经过Agentless强化学习的模型进行微调, 解锁工具使用和多轮对话能力
+
+## Exp
+
+
+
+## 启示
