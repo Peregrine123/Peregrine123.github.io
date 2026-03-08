@@ -30,7 +30,14 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/zh/";
               },
-            },{
+            },{id: "nav-llm-library",
+          title: "LLM Library",
+          description: "A searchable showcase for 99 LLM reading notes curated from my knowledge base.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/llm-library/";
+          },
+        },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
