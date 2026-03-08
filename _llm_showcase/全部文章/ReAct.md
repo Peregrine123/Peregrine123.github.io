@@ -1,0 +1,28 @@
+---
+分区:
+tags:
+  - LLM
+  - Agentic
+源码:
+---
+## Abstract + Introduction
+- 背景
+	- 以[[CoT]] prompting 为代表, 通过在提示中加入思维链的例子, 让模型具有了初步的思考能力
+	- 研究者开始将LLM作为决策核心, 在交互式环境中由LLM生成动作或计划 
+- 挑战
+	- [[CoT]]的封闭性, 无法与环境进行交互, 一旦推理有一步出错就越走越远, 造成错误的累计
+	- 单纯依靠行动缺乏长期规划能力, 容易做出短视的行为
+- 贡献
+	- 提出了一套思考-行动的提示词框架, 让模型能够通过ReAct框架, 与外部环境进行交互, 推理并行动, 做出更加复杂的行为
+## Method
+- ReAct prompting![[Pasted image 20251017080426.png]]
+- 遵循Trought->Action->Observation的prompt模版
+## Exp
+#### HotpotQA
+![[Pasted image 20251017081539.png]]
+- 基础的ReAct在知识问答上表现稍有提升
+- 结合[[CoT]]后有比较大的提升
+#### Agentic
+![[Pasted image 20251017081435.png]]
+- 可以发现 在Agentic场景下, ReAct的结果显著的比较好
+## 启示
