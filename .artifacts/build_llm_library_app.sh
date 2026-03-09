@@ -22,10 +22,7 @@ pnpm install --frozen-lockfile=false
 pnpm build
 
 mkdir -p "$REPO_ROOT/assets/llm-library"
-cp dist/llm-library.js "$REPO_ROOT/assets/llm-library/llm-library.js"
-
-if [ -f dist/llm-library.css ]; then
-  cp dist/llm-library.css "$REPO_ROOT/assets/llm-library/llm-library.css"
-fi
+find "$REPO_ROOT/assets/llm-library" -mindepth 1 -maxdepth 1 ! -name markdown -exec rm -rf {} +
+cp -R dist/. "$REPO_ROOT/assets/llm-library/"
 
 echo "Built llm-library assets into $REPO_ROOT/assets/llm-library"

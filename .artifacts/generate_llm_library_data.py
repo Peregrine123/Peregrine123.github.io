@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,6 +14,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SHOWCASE_DIR = REPO_ROOT / "_llm_showcase" / "全部文章"
 MANIFEST_PATH = REPO_ROOT / "_llm_showcase" / "来源路径清单.tsv"
 OUTPUT_PATH = REPO_ROOT / "assets" / "json" / "llm-library-data.json"
+MARKDOWN_OUTPUT_DIR = REPO_ROOT / "assets" / "llm-library" / "markdown"
 PREVIEW_LIMIT = 240
 
 WIKILINK_PATTERN = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
@@ -41,7 +43,7 @@ def load_source_map() -> dict[str, str]:
     return source_map
 
 
-def split_frontmatter(text: str) -> tuple[list[str], str] | tuple[None, str]:
+def split_frontmatter(text: str) -> tuple[list[str] | None, str]:
     lines = text.splitlines()
     if len(lines) < 3 or lines[0].strip() != "---":
         return None, text
@@ -144,6 +146,10 @@ def build_records() -> dict[str, object]:
     tag_counter: Counter[str] = Counter()
     items: list[dict[str, object]] = []
 
+    if MARKDOWN_OUTPUT_DIR.exists():
+        shutil.rmtree(MARKDOWN_OUTPUT_DIR)
+    MARKDOWN_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
     files = sorted(SHOWCASE_DIR.glob("*.md"), key=lambda path: path.name.lower())
 
     for index, file_path in enumerate(files, start=1):
@@ -156,18 +162,23 @@ def build_records() -> dict[str, object]:
         secondary_tags = [tag for tag in tags if tag.casefold() != "llm"] or ["未分类"]
         preview = build_preview(body)
         source_path = source_map.get(file_path.name, str(file_path.relative_to(REPO_ROOT)))
+        record_id = f"llm-{index:03d}"
+        markdown_asset = f"{record_id}.md"
+
+        (MARKDOWN_OUTPUT_DIR / markdown_asset).write_text(body.lstrip() + "\n", encoding="utf-8")
 
         for tag in secondary_tags:
             tag_counter[tag] += 1
 
         items.append(
             {
-                "id": f"llm-{index:03d}",
+                "id": record_id,
                 "title": derive_title(file_path),
                 "fileName": file_path.name,
                 "primaryTag": "LLM",
                 "secondaryTags": secondary_tags,
                 "sourcePath": source_path,
+                "markdownAsset": markdown_asset,
                 "preview": preview,
             }
         )

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type LibraryItem = {
   id: string;
@@ -7,6 +7,7 @@ type LibraryItem = {
   primaryTag: string;
   secondaryTags: string[];
   sourcePath: string;
+  markdownAsset: string;
   preview: string;
 };
 
@@ -19,7 +20,11 @@ type LibraryPayload = {
 
 type AppProps = {
   dataUrl: string;
+  markdownBaseUrl: string;
 };
+
+const WIKILINK_PATTERN = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
+const EMBED_WIKILINK_PATTERN = /!\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
 
 const formatGeneratedAt = (value: string) => {
   const date = new Date(value);
@@ -33,13 +38,34 @@ const formatGeneratedAt = (value: string) => {
   }).format(date);
 };
 
-function App({ dataUrl }: AppProps) {
+const unwrapWikiLink = (_match: string, target: string, explicitText?: string) => {
+  if (explicitText) {
+    return explicitText;
+  }
+
+  return target.split("/").pop() ?? target;
+};
+
+const normalizeMarkdown = (content: string) =>
+  content.replace(/\r\n/g, "\n").replace(EMBED_WIKILINK_PATTERN, unwrapWikiLink).replace(WIKILINK_PATTERN, unwrapWikiLink);
+
+function App({ dataUrl, markdownBaseUrl }: AppProps) {
   const searchInputId = "llm-library-search";
   const [payload, setPayload] = useState<LibraryPayload | null>(null);
   const [query, setQuery] = useState("");
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [readerMode, setReaderMode] = useState(false);
+  const [readerStatus, setReaderStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
+  const [readerHtml, setReaderHtml] = useState("");
+  const [readerErrorMessage, setReaderErrorMessage] = useState<string | null>(null);
+  const articleCache = useRef<Record<string, string>>({});
+  const selectedIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    selectedIdRef.current = selectedId;
+  }, [selectedId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -51,6 +77,7 @@ function App({ dataUrl }: AppProps) {
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
         }
+
         const nextPayload = (await response.json()) as LibraryPayload;
         if (!cancelled) {
           setPayload(nextPayload);
@@ -76,9 +103,16 @@ function App({ dataUrl }: AppProps) {
     }
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setSelectedId(null);
+      if (event.key !== "Escape") {
+        return;
       }
+
+      if (readerMode) {
+        setReaderMode(false);
+        return;
+      }
+
+      setSelectedId(null);
     };
 
     window.addEventListener("keydown", onKeyDown);
@@ -89,6 +123,13 @@ function App({ dataUrl }: AppProps) {
       window.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = originalOverflow;
     };
+  }, [readerMode, selectedId]);
+
+  useEffect(() => {
+    setReaderMode(false);
+    setReaderStatus("idle");
+    setReaderHtml("");
+    setReaderErrorMessage(null);
   }, [selectedId]);
 
   const items = payload?.items ?? [];
@@ -100,7 +141,6 @@ function App({ dataUrl }: AppProps) {
       .filter((item) => {
         const matchesQuery =
           !normalizedQuery || item.title.toLowerCase().includes(normalizedQuery) || item.preview.toLowerCase().includes(normalizedQuery);
-
         const matchesTags = activeTags.length === 0 || activeTags.every((tag) => item.secondaryTags.includes(tag));
 
         return matchesQuery && matchesTags;
@@ -117,6 +157,7 @@ function App({ dataUrl }: AppProps) {
       if (right[1] !== left[1]) {
         return right[1] - left[1];
       }
+
       return left[0].localeCompare(right[0]);
     });
   }, [payload]);
@@ -125,6 +166,59 @@ function App({ dataUrl }: AppProps) {
 
   const toggleTag = (tag: string) => {
     setActiveTags((current) => (current.includes(tag) ? current.filter((entry) => entry !== tag) : [...current, tag]));
+  };
+
+  const openReader = async () => {
+    if (!selectedItem) {
+      return;
+    }
+
+    setReaderMode(true);
+    setReaderErrorMessage(null);
+
+    const cachedHtml = articleCache.current[selectedItem.id];
+    if (cachedHtml) {
+      setReaderHtml(cachedHtml);
+      setReaderStatus("ready");
+      return;
+    }
+
+    setReaderStatus("loading");
+
+    try {
+      const markdownUrl = new URL(selectedItem.markdownAsset, new URL(markdownBaseUrl, window.location.href)).toString();
+      const response = await fetch(markdownUrl);
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const markdownText = await response.text();
+      const normalizedMarkdown = normalizeMarkdown(markdownText);
+      const [{ marked }, { default: DOMPurify }] = await Promise.all([import("marked"), import("dompurify")]);
+      const rawHtml = await marked.parse(normalizedMarkdown, {
+        async: false,
+        breaks: true,
+        gfm: true,
+      });
+      const safeHtml = DOMPurify.sanitize(rawHtml, {
+        USE_PROFILES: {
+          html: true,
+        },
+      });
+
+      if (selectedIdRef.current !== selectedItem.id) {
+        return;
+      }
+
+      articleCache.current[selectedItem.id] = safeHtml;
+      setReaderHtml(safeHtml);
+      setReaderStatus("ready");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unknown error";
+      setReaderStatus("error");
+      setReaderErrorMessage(`加载全文失败：${message}`);
+    }
   };
 
   return (
@@ -225,7 +319,7 @@ function App({ dataUrl }: AppProps) {
       {selectedItem ? (
         <div className="llm-library-modal-backdrop" onClick={() => setSelectedId(null)} role="presentation">
           <section
-            className="llm-library-modal"
+            className={readerMode ? "llm-library-modal llm-library-modal--reader" : "llm-library-modal"}
             role="dialog"
             aria-modal="true"
             aria-labelledby="llm-library-modal-title"
@@ -233,33 +327,79 @@ function App({ dataUrl }: AppProps) {
           >
             <header className="llm-library-modal-header">
               <div>
-                <p className="llm-library-eyebrow">Detail</p>
+                <p className="llm-library-eyebrow">{readerMode ? "Reader" : "Detail"}</p>
                 <h3 id="llm-library-modal-title">{selectedItem.title}</h3>
               </div>
-              <button type="button" className="llm-library-close" onClick={() => setSelectedId(null)}>
-                关闭
-              </button>
+              <div className="llm-library-modal-actions">
+                {readerMode ? (
+                  <button type="button" className="llm-library-secondary-action" onClick={() => setReaderMode(false)}>
+                    返回摘要
+                  </button>
+                ) : (
+                  <button type="button" className="llm-library-primary-action" onClick={openReader}>
+                    查看全文
+                  </button>
+                )}
+                <button type="button" className="llm-library-close" onClick={() => setSelectedId(null)}>
+                  关闭
+                </button>
+              </div>
             </header>
 
             <div className="llm-library-modal-body">
-              <div className="llm-library-tag-list">
-                <span className="detail-chip primary">{selectedItem.primaryTag}</span>
-                {selectedItem.secondaryTags.map((tag) => (
-                  <span key={tag} className="detail-chip">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              {readerMode ? (
+                <>
+                  <div className="llm-library-tag-list">
+                    <span className="detail-chip primary">{selectedItem.primaryTag}</span>
+                    {selectedItem.secondaryTags.map((tag) => (
+                      <span key={tag} className="detail-chip">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-              <div className="llm-library-detail-block">
-                <h4>摘要预览</h4>
-                <p>{selectedItem.preview}</p>
-              </div>
+                  <div className="llm-library-detail-block">
+                    <h4>原始路径</h4>
+                    <code>{selectedItem.sourcePath}</code>
+                  </div>
 
-              <div className="llm-library-detail-block">
-                <h4>原始路径</h4>
-                <code>{selectedItem.sourcePath}</code>
-              </div>
+                  {readerStatus === "loading" ? <div className="llm-library-state">正在加载全文并渲染 Markdown…</div> : null}
+
+                  {readerStatus === "error" ? (
+                    <div className="llm-library-state error" role="alert">
+                      {readerErrorMessage}
+                    </div>
+                  ) : null}
+
+                  {readerStatus === "ready" ? <article className="llm-library-reader" dangerouslySetInnerHTML={{ __html: readerHtml }} /> : null}
+                </>
+              ) : (
+                <>
+                  <div className="llm-library-tag-list">
+                    <span className="detail-chip primary">{selectedItem.primaryTag}</span>
+                    {selectedItem.secondaryTags.map((tag) => (
+                      <span key={tag} className="detail-chip">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="llm-library-detail-block">
+                    <h4>摘要预览</h4>
+                    <p>{selectedItem.preview}</p>
+                  </div>
+
+                  <div className="llm-library-detail-block">
+                    <h4>原始路径</h4>
+                    <code>{selectedItem.sourcePath}</code>
+                  </div>
+
+                  <div className="llm-library-detail-block">
+                    <h4>继续阅读</h4>
+                    <p>点击右上角的“查看全文”，会把该篇 Markdown 正文渲染后呈现出来。</p>
+                  </div>
+                </>
+              )}
             </div>
           </section>
         </div>
