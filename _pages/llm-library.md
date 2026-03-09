@@ -12,6 +12,7 @@ nav_order: 5
 <div
   id="llm-library-root"
   data-source="{{ '/assets/json/llm-library-data.json' | relative_url }}"
+  data-markdown-base="{{ '/assets/llm-library/markdown/' | relative_url }}"
 ></div>
 
 <noscript>
