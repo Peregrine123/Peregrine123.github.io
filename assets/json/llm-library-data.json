@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-08T23:46:20.634897+00:00",
-  "totalCount": 99,
+  "generatedAt": "2026-03-09T00:05:49.771976+00:00",
+  "totalCount": 98,
   "tagCounts": {
     "Agentic": 22,
     "code_agent": 16,
     "MLLM": 14,
     "Based": 12,
-    "Eval": 9,
+    "Eval": 8,
     "Analysis": 6,
     "data": 6,
     "efficiency": 4,
@@ -1203,18 +1203,6 @@
       "sourcePath": "Notion/文件夹/VQ-VAE.md",
       "markdownAsset": "llm-098.md",
       "preview": "Abstract + Introduction · 技术流派 · VAE(变分自编码器): 主流的VAE使用连续的潜在变量, 易于训练, 但是生成的图像比较模糊 · 自回归模型: 通过逐个预测像素或者样本, 生成质量极高, 但是效率很慢, 且缺乏在高层次抽象上进行操作的潜空间"
-    },
-    {
-      "id": "llm-099",
-      "title": "尚未发布!!! SWE-Refactor A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring",
-      "fileName": "尚未发布!!! SWE-Refactor A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring.md",
-      "primaryTag": "LLM",
-      "secondaryTags": [
-        "Eval"
-      ],
-      "sourcePath": "Notion/文件夹/尚未发布!!! SWE-Refactor A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring.md",
-      "markdownAsset": "llm-099.md",
-      "preview": "尚未发布!!! · Abstract + Introduction · 大多数现有的code benchmark都是集中在新代码生成或者修复bug · 重构基准大多数是原子化的(只设计单一变换), 而且高度依赖python, 对企业级语言(如java)的深度支持较少"
     }
   ]
 }
