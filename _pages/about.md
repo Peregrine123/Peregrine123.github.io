@@ -2,8 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: Undergraduate Student, Agentic AI, Multi-Agent System and Multimodal LLMs
-description: Undergraduate student at South China Normal University working on agentic AI systems and multimodal large language models.
+subtitle: Undergraduate Student, Agentic AI, Multi-Agent Systems and LLM Post-Training
+description: Undergraduate student at South China Normal University working on agentic AI systems and post-training methods for large models.
 header_name_primary: Zhepei
 header_name_secondary: Hong
 
@@ -36,14 +36,13 @@ latest_posts:
 Language: English / [中文]({{ '/zh/' | relative_url }})
 
 I am an undergraduate student at the [School of Artificial Intelligence, South China Normal University](http://ai.scnu.edu.cn/).
-My current research focuses on **agentic AI for code intelligence**, especially **multi-agent system collaboration**, tool-use orchestration, and reliable autonomous coding workflows.
 
-I also work on **multimodal large language models (MLLMs)**, with a specific focus on **video understanding**, multimodal reasoning, and cross-modal grounding across text, code, and vision.
+My research currently focuses on two directions. One is **agentic AI systems for code intelligence**, with an emphasis on **multi-agent collaboration**, tool-use orchestration, and reliable autonomous coding workflows. The other is **post-training for large models**, where I currently focus on **on-policy distillation (OPD)**, especially method design for black-box distillation and the combination of OPD with reinforcement learning algorithms.
 
-My recent work focuses on **long-horizon coding tasks with multi-agent systems**, with an emphasis on long-range planning, cross-step collaboration, and completion-quality evaluation.
+My recent work centers on **agent systems and OPD**. On the one hand, I study **long-horizon tasks for multi-agent systems in coding**, with an emphasis on long-range planning, cross-step collaboration, and completion-quality evaluation. On the other hand, I explore the use of **OPD in reinforcement learning training** and its empirical effectiveness.
 
 My educational and research experience:
 
 - B.Eng. candidate in Software Engineering at [South China Normal University](https://www.scnu.edu.cn/), 2023-2027.
-- Undergraduate researcher in Agentic AI and multimodal model systems.
+- Undergraduate researcher in agentic AI systems and post-training methods for large models.
 - Awards include the First-Class Scholarship at SCNU, MCM/ICM Meritorious Winner, and National Second Prize in the Global AI Elite Competition.

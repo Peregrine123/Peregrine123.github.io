@@ -2,8 +2,8 @@
 layout: about
 title: 关于
 permalink: /zh/
-subtitle: 本科生，Agentic AI、Multi-Agent System 与多模态大模型
-description: 华南师范大学本科生，研究方向为 Agentic AI 系统与多模态大模型。
+subtitle: 本科生，Agentic AI、Multi-Agent System 与大模型后训练
+description: 华南师范大学本科生，研究方向为 Agentic AI 系统与大模型后训练方法。
 nav: false
 lang: zh
 header_name_primary: 洪
@@ -38,11 +38,10 @@ latest_posts:
 语言： [English]({{ '/' | relative_url }}) / 中文
 
 我目前就读于[华南师范大学人工智能学院](http://ai.scnu.edu.cn/)，是一名本科生。
-当前研究重点是**面向代码智能的 Agentic AI 系统**，尤其关注**代码多智能体协作**、工具调用编排与可可靠执行的自动化工作流。
 
-同时我也持续研究**多模态大模型（MLLM）**，重点包括**视频理解**、多模态推理与跨模态对齐（文本、代码、视觉）。
+当前研究主要聚焦于两个方向。一是面向代码智能的 Agentic AI 系统，重点关注代码多智能体协作、工具调用编排与可可靠执行的自动化工作流。二是大模型后训练方法，当前重点关注同策略蒸馏 OPD，尤其关注黑盒蒸馏场景下的方法设计，以及 OPD 与强化学习算法的结合。
 
-近期工作主要聚焦于 **Multi-Agent System 在代码领域的长程任务探索**，重点关注长链路规划、跨步骤协作与任务完成质量评估。
+近期工作主要围绕 Agent 系统与 OPD 展开。一方面关注代码领域 Multi-Agent System 的长程任务探索，另一方面关注 OPD 在强化学习训练范式中的应用与效果。
 
 我的教育与科研经历：
 
