@@ -11,3 +11,11 @@
 "BSPC":
   url: https://www.sciencedirect.com/journal/biomedical-signal-processing-and-control
   color: "#f26f21"
+
+"BIBM":
+  url: https://ieeebibm.org/
+  color: "#2f6fed"
+
+"TAFFC":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369
+  color: "#7b4dff"
