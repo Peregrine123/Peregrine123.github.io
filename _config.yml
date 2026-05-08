@@ -9,12 +9,12 @@ last_name: 喆沛
 contact_note: >
   I welcome discussions on research collaboration and technical ideas.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Undergraduate researcher in Software Engineering at South China Normal University, focusing on cross-subject EEG emotion recognition and agentic AI systems.
+  Undergraduate researcher at South China Normal University, focusing on LLM post-training, on-policy distillation, reinforcement learning, and agentic AI systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: eeg, emotion-recognition, domain-adaptation, llm-agent, multimodal-llm # add your own keywords or leave empty
+keywords: llm-post-training, on-policy-distillation, reinforcement-learning, agentic-ai, llm-agent # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: P # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

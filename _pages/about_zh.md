@@ -2,8 +2,8 @@
 layout: about
 title: 关于
 permalink: /zh/
-subtitle: 本科生，Agentic AI、Multi-Agent System 与大模型后训练
-description: 华南师范大学本科生，研究方向为 Agentic AI 系统与大模型后训练方法。
+subtitle: 本科生，大模型后训练与 Agentic AI
+description: 华南师范大学本科生，研究方向为大模型后训练、同策略蒸馏、强化学习与 Agentic AI 系统。
 nav: false
 lang: zh
 header_name_primary: 洪
@@ -21,6 +21,7 @@ profile:
       <p class="student-links">
         <a href="/zh/cv/">[简历]</a>
         <a href="/zh/publications/">[论文]</a>
+        <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ">[Google Scholar]</a>
       </p>
       <p>email: hongzhepei@gmail.com</p>
     </div>
@@ -37,14 +38,13 @@ latest_posts:
 
 语言： [English]({{ '/' | relative_url }}) / 中文
 
-我目前就读于[华南师范大学人工智能学院](http://ai.scnu.edu.cn/)，是一名本科生。
+我目前就读于[华南师范大学人工智能学院](http://ai.scnu.edu.cn/)，是一名本科生。我的研究兴趣包括**大模型后训练**与 **Agentic AI 系统**，近期工作重点关注**同策略蒸馏**、**强化学习训练范式**，以及可靠的大语言模型智能体。
 
-当前研究主要聚焦于两个方向。一是面向代码智能的 Agentic AI 系统，重点关注代码多智能体协作、工具调用编排与可可靠执行的自动化工作流。二是大模型后训练方法，当前重点关注同策略蒸馏 OPD，尤其关注黑盒蒸馏场景下的方法设计，以及 OPD 与强化学习算法的结合。
+我的研究主要围绕两个方向展开。第一个方向是**大模型后训练技术**，包括同策略蒸馏、强化学习训练范式以及黑盒模型蒸馏等问题。我尤其关注如何在后训练阶段提升模型的推理、任务执行与策略学习能力。
 
-近期工作主要围绕 Agent 系统与 OPD 展开。一方面关注代码领域 Multi-Agent System 的长程任务探索，另一方面关注 OPD 在强化学习训练范式中的应用与效果。
+第二个方向是 **Agentic AI 系统**，包括大语言模型智能体、多智能体协作、工具调用与长程任务求解。我对如何构建更可靠、可评估、可持续执行复杂任务的智能体系统感兴趣。
 
-我的教育与科研经历：
+背景：
 
 - 2023-2027 年就读于[华南师范大学](https://www.scnu.edu.cn/)，软件工程本科在读。
-- 主要开展 Agentic AI 与多模态模型系统相关的本科科研工作。
-- 获得华南师范大学一等奖学金、美赛 M 奖（国际二等奖）与全球人工智能精英赛国家二等奖。
+- 目前作为学生研究者，主要关注大模型后训练、强化学习与 Agentic AI 系统。

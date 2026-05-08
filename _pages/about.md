@@ -2,8 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: Undergraduate Student, Agentic AI, Multi-Agent Systems and LLM Post-Training
-description: Undergraduate student at South China Normal University working on agentic AI systems and post-training methods for large models.
+subtitle: Undergraduate Student, LLM Post-Training and Agentic AI
+description: Undergraduate student at South China Normal University working on LLM post-training, on-policy distillation, reinforcement learning, and agentic AI systems.
 header_name_primary: Zhepei
 header_name_secondary: Hong
 
@@ -19,6 +19,7 @@ profile:
       <p class="student-links">
         <a href="/cv/">[short bio]</a>
         <a href="/publications/">[selected papers]</a>
+        <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ">[Google Scholar]</a>
       </p>
       <p>email: hongzhepei@gmail.com</p>
     </div>
@@ -35,14 +36,13 @@ latest_posts:
 
 Language: English / [中文]({{ '/zh/' | relative_url }})
 
-I am an undergraduate student at the [School of Artificial Intelligence, South China Normal University](http://ai.scnu.edu.cn/).
+I am an undergraduate student at the [School of Artificial Intelligence, South China Normal University](http://ai.scnu.edu.cn/). My research interests lie in **LLM post-training** and **agentic AI systems**, with a current focus on **on-policy distillation**, **reinforcement learning**, and reliable LLM-based agents.
 
-My research currently focuses on two directions. One is **agentic AI systems for code intelligence**, with an emphasis on **multi-agent collaboration**, tool-use orchestration, and reliable autonomous coding workflows. The other is **post-training for large models**, where I currently focus on **on-policy distillation (OPD)**, especially method design for black-box distillation and the combination of OPD with reinforcement learning algorithms.
+My research mainly spans two directions. The first is **LLM post-training**, including on-policy distillation, reinforcement learning, and black-box model distillation. I am particularly interested in how post-training methods can improve reasoning, task execution, and policy learning in large language models.
 
-My recent work centers on **agent systems and OPD**. On the one hand, I study **long-horizon tasks for multi-agent systems in coding**, with an emphasis on long-range planning, cross-step collaboration, and completion-quality evaluation. On the other hand, I explore the use of **OPD in reinforcement learning training** and its empirical effectiveness.
+The second is **agentic AI systems**, including LLM agents, multi-agent collaboration, tool use, and long-horizon task solving. I am interested in building reliable and evaluable agents that can execute complex tasks over extended interaction trajectories.
 
-My educational and research experience:
+Background:
 
 - B.Eng. candidate in Software Engineering at [South China Normal University](https://www.scnu.edu.cn/), 2023-2027.
-- Undergraduate researcher in agentic AI systems and post-training methods for large models.
-- Awards include the First-Class Scholarship at SCNU, MCM/ICM Meritorious Winner, and National Second Prize in the Global AI Elite Competition.
+- Student researcher working on LLM post-training, reinforcement learning, and agentic AI systems.
