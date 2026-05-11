@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "publications",
-          description: "Publication list including accepted and under-review papers.",
+          description: "Publication list including preprints, accepted papers, and under-review work.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
