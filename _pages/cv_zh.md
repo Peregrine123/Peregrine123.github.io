@@ -16,10 +16,10 @@ published: false
 
 ## 研究兴趣
 
+- 大模型后训练、同策略蒸馏与强化学习
+- Agentic AI 系统（多智能体协作、工具调用、Coding Agent）
 - 跨被试 EEG 情感识别
 - 域适应与图表示学习
-- LLM Agent 系统（多智能体协作、Coding Agent）
-- 视觉语言与多模态大模型
 
 ## 科研经历
 
@@ -41,6 +41,7 @@ published: false
 
 ## 论文成果
 
+- **Rubric-based On-policy Distillation**. _arXiv preprint_，预印本，共同一作。
 - **Multi-scale Dynamic Temporal Network with Graph Matching Domain Adaptation for Cross-Subject EEG Emotion Recognition**. _IEEE Transactions on Affective Computing (TAFFC)_，已接收，共同一作。
 - **PR-DA: Prototype Regularization Domain Adaptation for Cross-Subject EEG-Based Emotion Recognition**. _IEEE BIBM 2025_（Oral），共同一作。
 

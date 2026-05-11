@@ -38,7 +38,7 @@ Language: English / [中文]({{ '/zh/' | relative_url }})
 
 I am an undergraduate student at the [School of Artificial Intelligence, South China Normal University](http://ai.scnu.edu.cn/). My research interests lie in **LLM post-training** and **agentic AI systems**, with a current focus on **on-policy distillation**, **reinforcement learning**, and reliable LLM-based agents.
 
-My research mainly spans two directions. The first is **LLM post-training**, including on-policy distillation, reinforcement learning, and black-box model distillation. I am particularly interested in how post-training methods can improve reasoning, task execution, and policy learning in large language models.
+My research mainly spans two directions. The first is **LLM post-training**, including on-policy distillation, reinforcement learning, and black-box model distillation. My latest work, [ROPD]({{ '/assets/pdf/ROPD.pdf' | relative_url }}), explores rubric-based on-policy distillation as a black-box-compatible alternative to logit-based OPD for more sample-efficient LLM alignment.
 
 The second is **agentic AI systems**, including LLM agents, multi-agent collaboration, tool use, and long-horizon task solving. I am interested in building reliable and evaluable agents that can execute complex tasks over extended interaction trajectories.
 

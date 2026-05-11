@@ -19,3 +19,7 @@
 "TAFFC":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369
   color: "#7b4dff"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"

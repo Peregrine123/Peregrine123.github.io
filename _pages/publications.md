@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Publication list including accepted and under-review papers.
+description: Publication list including preprints, accepted papers, and under-review work.
 nav: true
 nav_order: 2
 ---

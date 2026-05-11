@@ -16,10 +16,10 @@ Language: English / [中文]({{ '/zh/cv/' | relative_url }})
 
 ## Research Interests
 
+- LLM post-training, on-policy distillation, and reinforcement learning
+- Agentic AI systems (multi-agent collaboration, tool use, coding agents)
 - Cross-subject EEG emotion recognition
 - Domain adaptation and graph-based representation learning
-- LLM agent systems (multi-agent collaboration, coding agents)
-- Vision-language and multimodal large models
 
 ## Research Experience
 
@@ -41,6 +41,7 @@ Prototype Regularization Domain Adaptation for cross-subject EEG emotion classif
 
 ## Publications
 
+- **Rubric-based On-policy Distillation**. _arXiv preprint_, preprint, equal contribution.
 - **Multi-scale Dynamic Temporal Network with Graph Matching Domain Adaptation for Cross-Subject EEG Emotion Recognition**. _IEEE Transactions on Affective Computing (TAFFC)_, accepted, co-first author.
 - **PR-DA: Prototype Regularization Domain Adaptation for Cross-Subject EEG-Based Emotion Recognition**. _IEEE BIBM 2025_ (Oral), co-first author.
 
