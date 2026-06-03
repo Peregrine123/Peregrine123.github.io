@@ -1,6 +1,10 @@
 metadata:
-  last_updated: '2026-04-27'
+  last_updated: '2026-06-03'
 papers:
+  Z2CuIuoAAAAJ:2osOgNQ5qMEC:
+    citations: 1
+    title: Rubric-based On-policy Distillation
+    year: '2026'
   Z2CuIuoAAAAJ:d1gkVwhDpl0C:
     citations: 0
     title: 'HEAT: Hierarchical Emotion Adaptation with Progressive Thresholding for EEG Emotion and Consciousness Detection'
