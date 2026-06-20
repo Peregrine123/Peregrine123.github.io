@@ -41,6 +41,7 @@ Prototype Regularization Domain Adaptation for cross-subject EEG emotion classif
 
 ## Publications
 
+- **TRACE: Trajectory Risk-Aware Compression for Long-Horizon Agent Safety**. _arXiv preprint_, preprint, first author.
 - **Rubric-based On-policy Distillation**. _arXiv preprint_, preprint, equal contribution.
 - **Multi-scale Dynamic Temporal Network with Graph Matching Domain Adaptation for Cross-Subject EEG Emotion Recognition**. _IEEE Transactions on Affective Computing (TAFFC)_, accepted, co-first author.
 - **PR-DA: Prototype Regularization Domain Adaptation for Cross-Subject EEG-Based Emotion Recognition**. _IEEE BIBM 2025_ (Oral), co-first author.

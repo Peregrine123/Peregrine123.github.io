@@ -41,6 +41,7 @@ published: false
 
 ## 论文成果
 
+- **TRACE: Trajectory Risk-Aware Compression for Long-Horizon Agent Safety**. _arXiv preprint_，预印本，第一作者。
 - **Rubric-based On-policy Distillation**. _arXiv preprint_，预印本，共同一作。
 - **Multi-scale Dynamic Temporal Network with Graph Matching Domain Adaptation for Cross-Subject EEG Emotion Recognition**. _IEEE Transactions on Affective Computing (TAFFC)_，已接收，共同一作。
 - **PR-DA: Prototype Regularization Domain Adaptation for Cross-Subject EEG-Based Emotion Recognition**. _IEEE BIBM 2025_（Oral），共同一作。

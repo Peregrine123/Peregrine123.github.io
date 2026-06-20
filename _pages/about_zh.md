@@ -19,7 +19,6 @@ profile:
       <p>华南师范大学 人工智能学院</p>
       <p>中国 广东 佛山</p>
       <p class="student-links">
-        <a href="/zh/cv/">[简历]</a>
         <a href="/zh/publications/">[论文]</a>
         <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ">[Google Scholar]</a>
       </p>
@@ -42,7 +41,7 @@ latest_posts:
 
 我的研究主要围绕两个方向展开。第一个方向是**大模型后训练技术**，包括同策略蒸馏、强化学习训练范式以及黑盒模型蒸馏等问题。我的最新论文 [ROPD]({{ '/assets/pdf/ROPD.pdf' | relative_url }}) 探索了基于 rubric 的同策略蒸馏方法，旨在以黑盒兼容且更具样本效率的方式完成大模型后训练与能力迁移。
 
-第二个方向是 **Agentic AI 系统**，包括大语言模型智能体、多智能体协作、工具调用与长程任务求解。我对如何构建更可靠、可评估、可持续执行复杂任务的智能体系统感兴趣。
+第二个方向是 **Agentic AI 系统**，包括大语言模型智能体、多智能体协作、工具调用与长程任务求解。我对如何构建更可靠、可评估、可持续执行复杂任务的智能体系统感兴趣。我的最新论文 [TRACE]({{ '/assets/pdf/TRACE.pdf' | relative_url }}) 将长程智能体安全检测重构为轨迹级证据压缩，通过 Compressor-Reader 设计聚合长轨迹中稀疏、延迟与组合性的风险信号。
 
 背景：
 

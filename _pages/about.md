@@ -17,7 +17,6 @@ profile:
       <p>School of Artificial Intelligence, South China Normal University</p>
       <p>Foshan, Guangdong, China</p>
       <p class="student-links">
-        <a href="/cv/">[short bio]</a>
         <a href="/publications/">[selected papers]</a>
         <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ">[Google Scholar]</a>
       </p>
@@ -40,7 +39,7 @@ I am an undergraduate student at the [School of Artificial Intelligence, South C
 
 My research mainly spans two directions. The first is **LLM post-training**, including on-policy distillation, reinforcement learning, and black-box model distillation. My latest work, [ROPD]({{ '/assets/pdf/ROPD.pdf' | relative_url }}), explores rubric-based on-policy distillation as a black-box-compatible alternative to logit-based OPD for more sample-efficient LLM alignment.
 
-The second is **agentic AI systems**, including LLM agents, multi-agent collaboration, tool use, and long-horizon task solving. I am interested in building reliable and evaluable agents that can execute complex tasks over extended interaction trajectories.
+The second is **agentic AI systems**, including LLM agents, multi-agent collaboration, tool use, and long-horizon task solving. I am interested in building reliable and evaluable agents that can execute complex tasks over extended interaction trajectories. My latest work, [TRACE]({{ '/assets/pdf/TRACE.pdf' | relative_url }}), reframes long-horizon agent safety detection as trajectory-level evidence compression, using a Compressor-Reader design to aggregate sparse, delayed, and compositional risk signals across long trajectories.
 
 Background:
 
