@@ -1,13 +1,17 @@
 metadata:
-  last_updated: '2026-06-03'
+  last_updated: '2026-06-29'
 papers:
   Z2CuIuoAAAAJ:2osOgNQ5qMEC:
-    citations: 1
-    title: Rubric-based On-policy Distillation
+    citations: 3
+    title: Rubric-based on-policy distillation
     year: '2026'
   Z2CuIuoAAAAJ:d1gkVwhDpl0C:
     citations: 0
     title: 'HEAT: Hierarchical Emotion Adaptation with Progressive Thresholding for EEG Emotion and Consciousness Detection'
+    year: '2026'
+  Z2CuIuoAAAAJ:qjMakFHDy7sC:
+    citations: 0
+    title: 'TRACE: Trajectory Risk-Aware Compression for Long-Horizon Agent Safety'
     year: '2026'
   Z2CuIuoAAAAJ:u-x6o8ySG0sC:
     citations: 0
