@@ -74,3 +74,19 @@
   code={https://github.com/seizeall/MDTN-GMDA},
   selected={true}
 }
+
+@article{sun2026easyopd,
+  title={EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models},
+  author={Sun, Jie and Zheng, Mao and Song, Mingyang and Zhong, Qiyong and Li, Gengsheng and Hong, Zhepei and Wu, Chang and Liu, Pengfei and Fang, Junfeng and Wang, Xiang},
+  journal={arXiv preprint},
+  month={July},
+  year={2026},
+  note={Preprint, Co-author},
+  abbr={arXiv},
+  arxiv={2607.11012},
+  pdf={EasyOPD.pdf},
+  preview={EasyOPD.png},
+  code={https://github.com/lds-ustc/EasyOPD},
+  selected={true},
+  abstract={Conventional language-model distillation often relies on fixed teacher-generated data, which may not cover the states encountered by an evolving student policy. On-policy distillation (OPD) instead collects teacher or evaluator supervision on student-generated rollouts. However, existing OPD methods differ substantially in supervision form, tokenizer compatibility, teacher access, and supervision granularity, leading to fragmented implementations that are difficult to reproduce and extend. We present EasyOPD, an on-policy distillation framework built on verl, a distributed reinforcement-learning framework for large language models. EasyOPD separates user-side configuration, method-specific supervision logic, and verl-based execution. Its method modules connect to the shared backend through extension boundaries for loss construction, rollout metadata, reward processing, tokenizer alignment, and teacher-side computation. We instantiate representative methods for three OPD settings -- cross-tokenizer OPD, on-policy self-distillation, and step-wise OPD. Experiments on reasoning, code-generation, scientific-knowledge, and tool-use benchmarks show that these implementations can be executed through the same verl-based backend while retaining their method-specific objectives and task-dependent performance profiles.}
+}
