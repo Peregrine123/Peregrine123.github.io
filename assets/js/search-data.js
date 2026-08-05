@@ -16,6 +16,20 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-news",
+          title: "news",
+          description: "Recent news and updates.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
         },{id: "dropdown-english",
               title: "English",
               description: "",
@@ -30,7 +44,16 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/zh/";
               },
-            },{
+            },{id: "news-our-paper-rubric-based-on-policy-distillation-is-now-available-on-arxiv-co-first-author-in-collaboration-with-nus-and-tencent",
+          title: 'Our paper “Rubric-based On-policy Distillation” is now available on arXiv (co-first author, in...',
+          description: "",
+          section: "News",},{id: "news-our-paper-trace-trajectory-risk-aware-compression-for-long-horizon-agent-safety-is-now-available-on-arxiv",
+          title: 'Our paper “TRACE: Trajectory Risk-Aware Compression for Long-Horizon Agent Safety” is now available...',
+          description: "",
+          section: "News",},{id: "news-our-paper-easyopd-an-easy-to-use-on-policy-distillation-framework-for-large-language-models-is-now-available-on-arxiv-co-authored-with-nus-and-tencent",
+          title: 'Our paper “EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models” is...',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -50,6 +73,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=Z2CuIuoAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/430/1497.html", "_blank");
         },
       },{
         id: 'social-orcid',
