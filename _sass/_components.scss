@@ -197,21 +197,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Month badge on selected publications (homepage)
-
-.month-badge {
-  float: right;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--global-theme-color);
-  background-color: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 12px;
-  padding: 0.1rem 0.7rem;
-  margin-left: 0.5rem;
-  margin-top: 0.15rem;
-}
-
 // News scroll container (scrollable but hidden scrollbar)
 
 .news-scroll {
