@@ -41,7 +41,7 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div>{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -60,11 +60,36 @@ layout: default
     {% endif %}
 
     <!-- Selected papers -->
+    <div class="clearfix"></div>
     {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Repositories -->
+    {% if site.data.selected_repos %}
+      <h2>repositories</h2>
+      <div class="row">
+        {% for repo in site.data.selected_repos %}
+          <div class="col-sm-6">
+            <div class="repo-card">
+              <div class="repo-card-head">
+                <a href="{{ repo.url }}" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github"></i> {{ repo.name }}
+                </a>
+                {% if repo.stars %}
+                  <span class="repo-stars" title="GitHub stars">
+                    <i class="fa-solid fa-star"></i> {{ repo.stars }}
+                  </span>
+                {% endif %}
+              </div>
+              <p>{{ repo.desc }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     {% endif %}
 
     <!-- Social -->

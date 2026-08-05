@@ -1,0 +1,7 @@
+# Selected GitHub repositories shown on the homepage
+# (static cards - no external image service dependency)
+# stars updated: 2026-08-05 (scraped from github.com)
+- name: ROPD_official
+  url: https://github.com/Peregrine123/ROPD_official
+  desc: Official implementation of Rubric-based On-policy Distillation for LLM alignment.
+  stars: 76
