@@ -82,8 +82,18 @@ ul.task-list input[type="checkbox"] {
       text-align: center;
     }
 
-    .student-links a + a {
-      margin-left: 0.35rem;
+    .student-links {
+      a {
+        font-size: 1.3rem;
+
+        i {
+          vertical-align: middle;
+        }
+
+        + a {
+          margin-left: 0.35rem;
+        }
+      }
     }
   }
 }
@@ -272,7 +282,6 @@ ul.task-list input[type="checkbox"] {
         height: 3.2rem;
         margin-bottom: 1rem;
       }
-
       svg {
         width: 3.5rem;
         height: 4rem;

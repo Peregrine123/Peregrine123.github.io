@@ -17,8 +17,10 @@ profile:
       <p>School of Artificial Intelligence, South China Normal University</p>
       <p>Foshan, Guangdong, China</p>
       <p class="student-links">
-        <a href="/publications/">[selected papers]</a>
-        <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ">[Google Scholar]</a>
+        <a href="https://dblp.org/pid/430/1497.html" title="DBLP" target="_blank" rel="noopener"><i class="ai ai-dblp"></i></a>
+        <a href="https://github.com/Peregrine123" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://orcid.org/0009-0006-9007-3327" title="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
       </p>
       <p>email: hongzhepei@gmail.com</p>
     </div>

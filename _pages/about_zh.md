@@ -19,8 +19,10 @@ profile:
       <p>华南师范大学 人工智能学院</p>
       <p>中国 广东 佛山</p>
       <p class="student-links">
-        <a href="/zh/publications/">[论文]</a>
-        <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ">[Google Scholar]</a>
+        <a href="https://dblp.org/pid/430/1497.html" title="DBLP" target="_blank" rel="noopener"><i class="ai ai-dblp"></i></a>
+        <a href="https://github.com/Peregrine123" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=Z2CuIuoAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://orcid.org/0009-0006-9007-3327" title="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
       </p>
       <p>email: hongzhepei@gmail.com</p>
     </div>
