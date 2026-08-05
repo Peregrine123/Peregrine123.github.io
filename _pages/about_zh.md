@@ -28,20 +28,28 @@ profile:
 selected_papers: true
 social: false
 
+repositories:
+  github_users:
+    - Peregrine123
+  github_repos:
+    - Peregrine123/ROPD_official
+    - Peregrine123/TRACE_official
+    - Peregrine123/HEAT
+    - Peregrine123/zotero-pdf-translate-md
+
 announcements:
-  enabled: false
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
+  limit: 3
 ---
 
 语言： [English]({{ '/' | relative_url }}) / 中文
 
 我目前就读于[华南师范大学人工智能学院](http://ai.scnu.edu.cn/)，是一名本科生。我的研究兴趣包括**大模型后训练**与 **Agentic AI 系统**，近期工作重点关注**同策略蒸馏**、**强化学习训练范式**，以及可靠的大语言模型智能体。
-
-我的研究主要围绕两个方向展开。第一个方向是**大模型后训练技术**，包括同策略蒸馏、强化学习训练范式以及黑盒模型蒸馏等问题。我的最新论文 [ROPD]({{ '/assets/pdf/ROPD.pdf' | relative_url }}) 探索了基于 rubric 的同策略蒸馏方法，旨在以黑盒兼容且更具样本效率的方式完成大模型后训练与能力迁移。
-
-第二个方向是 **Agentic AI 系统**，包括大语言模型智能体、多智能体协作、工具调用与长程任务求解。我对如何构建更可靠、可评估、可持续执行复杂任务的智能体系统感兴趣。我的最新论文 [TRACE]({{ '/assets/pdf/TRACE.pdf' | relative_url }}) 将长程智能体安全检测重构为轨迹级证据压缩，通过 Compressor-Reader 设计聚合长轨迹中稀疏、延迟与组合性的风险信号。
 
 背景：
 

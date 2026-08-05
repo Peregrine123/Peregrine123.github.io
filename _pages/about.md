@@ -26,20 +26,28 @@ profile:
 selected_papers: true
 social: false
 
+repositories:
+  github_users:
+    - Peregrine123
+  github_repos:
+    - Peregrine123/ROPD_official
+    - Peregrine123/TRACE_official
+    - Peregrine123/HEAT
+    - Peregrine123/zotero-pdf-translate-md
+
 announcements:
-  enabled: false
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
+  limit: 3
 ---
 
 Language: English / [中文]({{ '/zh/' | relative_url }})
 
 I am an undergraduate student at the [School of Artificial Intelligence, South China Normal University](http://ai.scnu.edu.cn/). My research interests lie in **LLM post-training** and **agentic AI systems**, with a current focus on **on-policy distillation**, **reinforcement learning**, and reliable LLM-based agents.
-
-My research mainly spans two directions. The first is **LLM post-training**, including on-policy distillation, reinforcement learning, and black-box model distillation. My latest work, [ROPD]({{ '/assets/pdf/ROPD.pdf' | relative_url }}), explores rubric-based on-policy distillation as a black-box-compatible alternative to logit-based OPD for more sample-efficient LLM alignment.
-
-The second is **agentic AI systems**, including LLM agents, multi-agent collaboration, tool use, and long-horizon task solving. I am interested in building reliable and evaluable agents that can execute complex tasks over extended interaction trajectories. My latest work, [TRACE]({{ '/assets/pdf/TRACE.pdf' | relative_url }}), reframes long-horizon agent safety detection as trajectory-level evidence compression, using a Compressor-Reader design to aggregate sparse, delayed, and compositional risk signals across long trajectories.
 
 Background:
 
