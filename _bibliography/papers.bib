@@ -1,20 +1,20 @@
 ---
 ---
 
-@article{fang2026ropd,
-  title={Rubric-based On-policy Distillation},
-  author={Fang, Junfeng and Hong, Zhepei and Zheng, Mao and Song, Mingyang and Li, Gengsheng and Jiang, Houcheng and Zhang, Dan and Guo, Haiyun and Wang, Xiang and Chua, Tat-Seng},
+@article{sun2026easyopd,
+  title={EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models},
+  author={Sun, Jie and Zheng, Mao and Song, Mingyang and Zhong, Qiyong and Li, Gengsheng and Hong, Zhepei and Wu, Chang and Liu, Pengfei and Fang, Junfeng and Wang, Xiang},
   journal={arXiv preprint},
-  month={May},
+  month={July},
   year={2026},
-  note={Preprint, Co-first author},
+  note={Preprint, Co-author},
   abbr={arXiv},
-  arxiv={2605.07396},
-  pdf={ROPD.pdf},
-  preview={ROPD.png},
-  code={https://github.com/Peregrine123/ROPD_official},
+  arxiv={2607.11012},
+  pdf={EasyOPD.pdf},
+  preview={EasyOPD.png},
+  code={https://github.com/lds-ustc/EasyOPD},
   selected={true},
-  abstract={On-policy distillation (OPD) is a powerful paradigm for model alignment, yet its reliance on teacher logits restricts its application to white-box scenarios. We introduce ROPD, a rubric-based OPD framework that induces prompt-specific rubrics from teacher-student contrasts and uses them to score student rollouts for on-policy optimization. Empirically, ROPD outperforms advanced logit-based OPD methods across most scenarios and achieves up to a 10x gain in sample efficiency, positioning rubric-based OPD as a flexible, black-box-compatible alternative for scalable distillation across proprietary and open-source LLMs.}
+  abstract={Conventional language-model distillation often relies on fixed teacher-generated data, which may not cover the states encountered by an evolving student policy. On-policy distillation (OPD) instead collects teacher or evaluator supervision on student-generated rollouts. However, existing OPD methods differ substantially in supervision form, tokenizer compatibility, teacher access, and supervision granularity, leading to fragmented implementations that are difficult to reproduce and extend. We present EasyOPD, an on-policy distillation framework built on verl, a distributed reinforcement-learning framework for large language models. EasyOPD separates user-side configuration, method-specific supervision logic, and verl-based execution. Its method modules connect to the shared backend through extension boundaries for loss construction, rollout metadata, reward processing, tokenizer alignment, and teacher-side computation. We instantiate representative methods for three OPD settings -- cross-tokenizer OPD, on-policy self-distillation, and step-wise OPD. Experiments on reasoning, code-generation, scientific-knowledge, and tool-use benchmarks show that these implementations can be executed through the same verl-based backend while retaining their method-specific objectives and task-dependent performance profiles.}
 }
 
 @article{hong2026trace,
@@ -33,6 +33,22 @@
   abstract={Long-horizon LLM agents produce safety evidence across long trajectories, where sparse, delayed, and compositional risk signals often escape local moderation. We reframe long-horizon agent safety detection as trajectory-level evidence compression and propose Trajectory Risk-Aware Compression for Long-Horizon Agent Safety (TRACE). TRACE uses a Compressor-Reader design: the Compressor encodes the full trajectory into a compact latent evidence state under trajectory-level supervision, and the Reader judges the raw trajectory with this latent evidence state as a safety reference. Across ASSE-Bench, Pre-Ex-Bench, and R-Judge, TRACE achieves the best accuracy on all evaluated backbones, improving over strong baselines by up to 12.6 percentage points. On LongSafety, TRACE shows smaller performance degradation as context length grows.}
 }
 
+@article{fang2026ropd,
+  title={Rubric-based On-policy Distillation},
+  author={Fang, Junfeng and Hong, Zhepei and Zheng, Mao and Song, Mingyang and Li, Gengsheng and Jiang, Houcheng and Zhang, Dan and Guo, Haiyun and Wang, Xiang and Chua, Tat-Seng},
+  journal={arXiv preprint},
+  month={May},
+  year={2026},
+  note={Preprint, Co-first author},
+  abbr={arXiv},
+  arxiv={2605.07396},
+  pdf={ROPD.pdf},
+  preview={ROPD.png},
+  code={https://github.com/Peregrine123/ROPD_official},
+  selected={true},
+  abstract={On-policy distillation (OPD) is a powerful paradigm for model alignment, yet its reliance on teacher logits restricts its application to white-box scenarios. We introduce ROPD, a rubric-based OPD framework that induces prompt-specific rubrics from teacher-student contrasts and uses them to score student rollouts for on-policy optimization. Empirically, ROPD outperforms advanced logit-based OPD methods across most scenarios and achieves up to a 10x gain in sample efficiency, positioning rubric-based OPD as a flexible, black-box-compatible alternative for scalable distillation across proprietary and open-source LLMs.}
+}
+
 @article{hong2026heat,
   title={HEAT: Hierarchical Emotion Adaptation with Progressive Thresholding for EEG Emotion and Consciousness Detection},
   author={Hong, Zhepei and Chen, Rongtao and Li, Liting and Chen, Jiajun and Gao, Wei and Pan, Jiahui},
@@ -44,20 +60,6 @@
   pdf={Heat.pdf},
   preview={HEAT.png},
   code={https://github.com/Peregrine123/HEAT},
-  selected={true}
-}
-
-@inproceedings{chen2025prda,
-  title={PR-DA: Prototype Regularization Domain Adaptation for Cross-Subject EEG-Based Emotion Recognition},
-  author={Chen, Rongtao and Hong, Zhepei and You, Qi and Xie, Chuwen and Zhang, Jiahui and Pan, Jiahui},
-  booktitle={IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
-  month={October},
-  year={2025},
-  note={Accepted, Oral presentation, Co-first author},
-  abbr={BIBM},
-  pdf={BIBM.pdf},
-  preview={BIBM.png},
-  code={https://github.com/seizeall/PR-DA},
   selected={true}
 }
 
@@ -75,18 +77,16 @@
   selected={true}
 }
 
-@article{sun2026easyopd,
-  title={EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models},
-  author={Sun, Jie and Zheng, Mao and Song, Mingyang and Zhong, Qiyong and Li, Gengsheng and Hong, Zhepei and Wu, Chang and Liu, Pengfei and Fang, Junfeng and Wang, Xiang},
-  journal={arXiv preprint},
-  month={July},
-  year={2026},
-  note={Preprint, Co-author},
-  abbr={arXiv},
-  arxiv={2607.11012},
-  pdf={EasyOPD.pdf},
-  preview={EasyOPD.png},
-  code={https://github.com/lds-ustc/EasyOPD},
-  selected={true},
-  abstract={Conventional language-model distillation often relies on fixed teacher-generated data, which may not cover the states encountered by an evolving student policy. On-policy distillation (OPD) instead collects teacher or evaluator supervision on student-generated rollouts. However, existing OPD methods differ substantially in supervision form, tokenizer compatibility, teacher access, and supervision granularity, leading to fragmented implementations that are difficult to reproduce and extend. We present EasyOPD, an on-policy distillation framework built on verl, a distributed reinforcement-learning framework for large language models. EasyOPD separates user-side configuration, method-specific supervision logic, and verl-based execution. Its method modules connect to the shared backend through extension boundaries for loss construction, rollout metadata, reward processing, tokenizer alignment, and teacher-side computation. We instantiate representative methods for three OPD settings -- cross-tokenizer OPD, on-policy self-distillation, and step-wise OPD. Experiments on reasoning, code-generation, scientific-knowledge, and tool-use benchmarks show that these implementations can be executed through the same verl-based backend while retaining their method-specific objectives and task-dependent performance profiles.}
+@inproceedings{chen2025prda,
+  title={PR-DA: Prototype Regularization Domain Adaptation for Cross-Subject EEG-Based Emotion Recognition},
+  author={Chen, Rongtao and Hong, Zhepei and You, Qi and Xie, Chuwen and Zhang, Jiahui and Pan, Jiahui},
+  booktitle={IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  month={October},
+  year={2025},
+  note={Accepted, Oral presentation, Co-first author},
+  abbr={BIBM},
+  pdf={BIBM.pdf},
+  preview={BIBM.png},
+  code={https://github.com/seizeall/PR-DA},
+  selected={true}
 }
