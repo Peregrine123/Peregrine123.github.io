@@ -1,9 +1,13 @@
 metadata:
-  last_updated: '2026-07-17'
+  last_updated: '2026-08-12'
 papers:
   Z2CuIuoAAAAJ:2osOgNQ5qMEC:
-    citations: 6
+    citations: 9
     title: Rubric-based on-policy distillation
+    year: '2026'
+  Z2CuIuoAAAAJ:UeHWp8X0CEIC:
+    citations: 0
+    title: 'EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models'
     year: '2026'
   Z2CuIuoAAAAJ:d1gkVwhDpl0C:
     citations: 0
