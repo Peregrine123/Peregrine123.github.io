@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-24'
+  last_updated: '2026-09-04'
 papers:
   Z2CuIuoAAAAJ:2osOgNQ5qMEC:
     citations: 10
@@ -18,7 +18,7 @@ papers:
     title: 'TRACE: Trajectory Risk-Aware Compression for Long-Horizon Agent Safety'
     year: '2026'
   Z2CuIuoAAAAJ:u-x6o8ySG0sC:
-    citations: 0
+    citations: 1
     title: Multi-scale Dynamic Temporal Network with Graph Matching Domain Adaptation for Cross-Subject EEG Emotion Recognition
     year: '2026'
   Z2CuIuoAAAAJ:u5HHmVD_uO8C:
